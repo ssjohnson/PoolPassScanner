@@ -1,0 +1,11 @@
+extends ./layout.jade
+
+block content
+    .container.centered
+        h1 Resident Scan Page
+        form.form-centered(id="residentScanForm" action="/resident" method="POST")
+            input.form-control(type="text" id="barcode" name="barcode" placeholder="Scan Barcode" required autofocus)
+            br
+            input.form-control.btn.btn-primary(type="submit" name="residentsubmit" value="Log")
+            
+        

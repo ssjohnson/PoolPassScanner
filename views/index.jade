@@ -1,0 +1,9 @@
+extends ./layout.jade
+
+block content
+    .container.centered(style="padding-top:50px; padding-left:100px;")
+        .form-group
+            form(action="/guest" method="get" id="guestform")
+                input.btn.btn-primary(type="Submit" Value="Guest")
+            form(action="/resident" method="get" id="residentform")
+                input.btn.btn-primary(type="Submit" Value="Resident")
