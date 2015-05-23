@@ -21,7 +21,7 @@ router.get('/', routes.mainpage);
 
 router.get('/guest', routes.guestPage);
 
-router.get('/guest/:numGuests', routes.guest_store.route.get);
+router.get('/guest/:apartment/:numGuests', routes.guest_store.route.get);
 
 router.post('/guest', routes.guest_post.route.post);
 

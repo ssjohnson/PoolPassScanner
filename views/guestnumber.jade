@@ -6,4 +6,4 @@ block content
         .row
             .btn-toolbar.btn-group.col-lg-12
                 -for(var x = 1; x < numguests+1; x++)
-                    a.btn.btn-primary.btn-lg(href="/guest/#{x}") #{x}
+                    a.btn.btn-primary.btn-lg(href="/guest/#{results[0].Apartment}/#{x}") #{x}

@@ -2,7 +2,9 @@ extends ./layout.jade
 
 block content
     .container.centered.col-lg-9.col-lg-offset-1(style="padding-top:50px; padding-left:100px;")
-            form.form-centered(action="/guest" method="get" id="guestform")
-                input.btn.btn-primary.btn-lg.btn-block(type="Submit" Value="Scan A Guest")
-            form.form-centered(action="/resident" method="get" id="residentform")
-                input.btn.btn-primary.btn-lg.btn-block(type="Submit" Value="Scan A Resident")
+        form.form-centered(action="/resident" method="get" id="residentform")
+            input.btn.btn-primary.btn-lg.btn-block(type="Submit" Value="Scan A Resident")
+        form.form-centered(action="/guest" method="get" id="guestform")
+            input.btn.btn-primary.btn-lg.btn-block(type="Submit" Value="Scan A Guest")
+            
+            

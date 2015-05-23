@@ -1,7 +1,7 @@
 var memberlist = require('../memberlist.json');
 var fs = require('fs');
 var moment = require('moment');
-var log = require('../log.json');
+var log = require('../residentlog.json');
 
 exports.route = {
     post:
@@ -34,7 +34,7 @@ exports.route = {
                 log.push(results[i]);
             }
             
-            fs.writeFile('log.json', JSON.stringify(log), function(err) {
+            fs.writeFile('residentlog.json', JSON.stringify(log), function(err) {
                 if(err) 
                     console.log(err);
             });

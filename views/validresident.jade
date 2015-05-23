@@ -6,10 +6,11 @@ block content
             h1 #{result.FirstName}&nbsp#{result.LastName}
         h1 signed in on #{date}
         br
-        form.form-centered(action="/guest" method="get" id="guestform")
-            input.btn.btn-primary.btn-lg.btn-block(type="Submit" Value="Scan A Guest")
         form.form-centered(action="/resident" method="get" id="residentform")
-            input.btn.btn-primary.btn-lg.btn-block(type="Submit" Value="Scan A Resident")
+            input.btn.btn-primary.btn-lg.btn-block(type="Submit" Value="Scan A Resident Pass")
+        form.form-centered(action="/guest" method="get" id="guestform")
+            input.btn.btn-primary.btn-lg.btn-block(type="Submit" Value="Scan A Guest Pass")
+        
 
         
         
