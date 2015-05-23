@@ -21,6 +21,8 @@ router.get('/', routes.mainpage);
 
 router.get('/guest', routes.guestPage);
 
+router.post('/guest', routes.guest_post.route.post);
+
 router.get('/resident', routes.residentPage);
 
 router.post('/resident', routes.resident_post.route.post);

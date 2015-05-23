@@ -11,5 +11,4 @@ exports.guestPage = function (req, res) {
 };
 
 exports.resident_post = require('./resident_post.js');
-
-
+exports.guest_post = require('./guest_post.js');
