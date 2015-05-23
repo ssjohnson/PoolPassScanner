@@ -1,0 +1,27 @@
+{
+  "name": "PoolPassScanner",
+  "version": "1.0.0",
+  "description": "Pool Pass Scanner",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "express": "^4.12.4",
+    "jade": "^1.9.2",
+    "moment": "^2.10.3",
+    "morgan": "^1.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ssjohnson/PoolPassScanner.git"
+  },
+  "author": "Stephen S Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssjohnson/PoolPassScanner/issues"
+  },
+  "homepage": "https://github.com/ssjohnson/PoolPassScanner"
+}

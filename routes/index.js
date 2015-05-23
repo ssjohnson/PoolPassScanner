@@ -12,3 +12,4 @@ exports.guestPage = function (req, res) {
 
 exports.resident_post = require('./resident_post.js');
 
+

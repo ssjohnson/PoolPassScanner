@@ -27,6 +27,8 @@ router.post('/resident', routes.resident_post.route.post);
 
 app.use(router);
 
+
+
 http.listen(process.env.PORT || 3000, function() {
     console.log('Example App Listening at 3000');
 });

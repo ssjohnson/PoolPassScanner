@@ -1,0 +1,16 @@
+extends ./layout.jade
+
+block content
+    .container.centered
+        each result in results
+            h1 #{result.FirstName}&nbsp#{result.LastName}
+        h1 signed in on #{date}
+        br
+        .row
+            form.col-lg-2(id="residentScanForm" action="/resident" method="GET")
+                input.btn.btn-primary(type="submit" value="Scan Resident")
+            form.col-lg-3(id="guestScanForm" action="/guest" method="GET")
+                input.btn.btn-primary(type="submit" value="Scan Guest")
+
+        
+        
