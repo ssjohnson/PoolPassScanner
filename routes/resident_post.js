@@ -8,7 +8,16 @@ exports.route = {
         function(req, res) {
             
             var barcode = req.param('barcode');
-            var date = moment()._d;
+            
+            var date = "" + moment().month() + "/" + moment().date() + "/" + moment().year() + " at " + moment().hours() + ":";
+            
+            if(moment().minutes() < 10)
+                date += "0" + moment().minutes();
+            else
+                date += moment().minutes();
+                
+            console.log(date);
+            
             var results = [];
             
             for(var i = 0; i < memberlist.length; i++) 
@@ -26,7 +35,8 @@ exports.route = {
             }
             
             fs.writeFile('log.json', JSON.stringify(log), function(err) {
-                console.log(err);
+                if(err) 
+                    console.log(err);
             });
             
             if(results.length != 0) {
