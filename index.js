@@ -32,6 +32,8 @@ router.post('/resident', routes.resident_post.route.post);
 
 router.get('/newuser', routes.newUser.route.get);
 
+router.post('/newuser', routes.newUser.route.post);
+
 app.use(router);
 
 

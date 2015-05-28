@@ -1,5 +1,3 @@
-var fs = require('fs');
-
 function init() {
     if(navigator.webkitGetUserMedia)
     {
@@ -28,9 +26,17 @@ function takePhoto()
     c.getContext('2d').drawImage(v, 0, 0, 320, 240);
 }
 
+function getBase64(canvas) {
+    var dataURL = canvas.toDataURL("image/png");
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/,"");
+}
 
-var save = document.getElementById('btn-download');
-save.addEventListener('click', function(e) {
-    var dataURL = document.getElementById('photo').toDataURL('image/png');
-    save.href = dataEURL;
-});
+function savePic() {
+    var canvas = document.getElementById('photo');
+    var canvas64 = getBase64(canvas);
+    
+    var lnk = document.getElementById('download-pic');
+    lnk.href = "/" + canvas64;
+}
+    
+                    
