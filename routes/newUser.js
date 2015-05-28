@@ -9,7 +9,9 @@ exports.route = {
     
     post:
         function (req, res) {
-            console.log(req);
-            res.redirect('/');
+            var base64data = req.body.data.replace(/^data:image\/png;base64,/, "");
+            fs.writeFileSync('images/image.png', base64data, 'base64', function(err) { console.log(err); });
+            res.render('index');
         }
 }
+

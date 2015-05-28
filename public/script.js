@@ -26,17 +26,20 @@ function takePhoto()
     c.getContext('2d').drawImage(v, 0, 0, 320, 240);
 }
 
-function getBase64(canvas) {
-    var dataURL = canvas.toDataURL("image/png");
-    return dataURL.replace(/^data:image\/(png|jpg);base64,/,"");
-}
-
 function savePic() {
     var canvas = document.getElementById('photo');
-    var canvas64 = getBase64(canvas);
+    var canvas64 = canvas.toDataURL("image/png");
+    console.log("HIT");
     
-    var lnk = document.getElementById('download-pic');
-    lnk.href = "/" + canvas64;
+    $.ajax ({
+        url:'http://localhost:3000/newuser',
+        data: {data:canvas64},
+        type: 'POST',
+        success: function() { console.log('success'); },
+        error: function() { console.log('error'); },
+        complete: function() { window.location.href = '/' }
+    });
+    
 }
     
                     

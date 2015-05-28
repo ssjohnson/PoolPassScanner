@@ -11,7 +11,7 @@ app.set('view engine', 'jade');
 app.use(morgan('dev'));
 
 app.use(body_parser.json());
-app.use(body_parser.urlencoded({ extended: false }));
+app.use(body_parser.urlencoded({ extended: false, limit: '50mb' }));
 app.use(express.static('public'));
         
 var router = express.Router();
