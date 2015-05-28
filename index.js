@@ -12,6 +12,7 @@ app.use(morgan('dev'));
 
 app.use(body_parser.json());
 app.use(body_parser.urlencoded({ extended: false }));
+app.use(express.static('public'));
         
 var router = express.Router();
 
@@ -28,6 +29,8 @@ router.post('/guest', routes.guest_post.route.post);
 router.get('/resident', routes.residentPage);
 
 router.post('/resident', routes.resident_post.route.post);
+
+router.get('/newuser', routes.newUser.route.get);
 
 app.use(router);
 

@@ -1,0 +1,17 @@
+extends ./layout.jade
+
+block content
+    script(src="./script.js")
+    body(onload='init();')
+        .media
+            .media-left
+                video.media-object(id="camFeed" autoplay)
+            .media-body
+            .media-right
+                canvas.media-object(id="photo" width="640" height="480")
+            br
+            div     
+                input.btn.btn-primary.btn-lg(type="button" value="Take Photo" onclick="takePhoto();")
+            br
+            div
+                a.btn.btn-primary.btn-lg(href="#" id="btn-download" download="my-file.png") Download
