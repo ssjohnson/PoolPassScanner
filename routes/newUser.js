@@ -17,12 +17,10 @@ exports.route = {
             var tag = url[4].replace("?", "");
             
             var imgPath = 'public/images/' + tag + '.png';
-            console.log(imgPath);
             
             for (var i = 0; i < memberlist.length; i++) {
                 if(memberlist[i].Tag == tag) {
                     memberlist[i].Picture = imgPath.replace('public/', '');
-                    console.log('success');
                     break;
                 }
             }

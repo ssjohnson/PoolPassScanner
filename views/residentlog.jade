@@ -1,0 +1,6 @@
+extends ./layout.jade
+
+block content
+    .container.centered.col-lg-12
+        each member in memberlist
+            p #{member.FirstName} #{member.LastName} signed in on #{member.date}

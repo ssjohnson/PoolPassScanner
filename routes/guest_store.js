@@ -27,9 +27,6 @@ exports.route = {
                     console.log(err);
             });
             
-            console.log(apartment);
-            console.log(numGuests);
-            
             res.redirect('/');
             
         }

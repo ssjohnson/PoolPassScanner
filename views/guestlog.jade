@@ -1,0 +1,6 @@
+extends ./layout.jade
+
+block content
+    .container.centered.col-lg-12
+        each member in guestlist
+            p #{member.Apartment} signed in on #{member.Date} with #{member.NumberOfGuests} guests

@@ -30,11 +30,11 @@ router.get('/resident', routes.residentPage);
 
 router.post('/resident', routes.resident_post.route.post);
 
-router.get('/newuser', routes.newUser.route.get);
-
-router.post('/newuser', routes.newUser.route.post);
-
 router.get('/addPhoto/:Tag', routes.newUser.route.get);
+
+router.get('/residentlog', routes.residentLog);
+
+router.get('/guestlog', routes.guestLog);
 
 app.use(router);
 

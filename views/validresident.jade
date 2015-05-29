@@ -6,7 +6,9 @@ block content
             h1 #{result.FirstName}&nbsp#{result.LastName}
             h1 signed in on #{date}
             if results[0].Picture != "null"
+                br
                 img(src='#{results[0].Picture}' width="320" height="240")
+                br
         br
         if results[0].Picture == "null"
             form.form-centered(action="/addphoto/#{results[0].Tag}" method="get" id="addphotoform")
