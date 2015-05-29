@@ -4,8 +4,13 @@ block content
     .container.centered
         each result in results
             h1 #{result.FirstName}&nbsp#{result.LastName}
-        h1 signed in on #{date}
+            h1 signed in on #{date}
+            if results[0].Picture != "null"
+                img(src='#{results[0].Picture}' width="320" height="240")
         br
+        if results[0].Picture == "null"
+            form.form-centered(action="/addphoto/#{results[0].Tag}" method="get" id="addphotoform")
+                input.btn.btn-primary.btn-lg.btn-block(type="Submit" Value="Add A Photo")
         form.form-centered(action="/resident" method="get" id="residentform")
             input.btn.btn-primary.btn-lg.btn-block(type="Submit" Value="Scan A Resident Pass")
         form.form-centered(action="/guest" method="get" id="guestform")

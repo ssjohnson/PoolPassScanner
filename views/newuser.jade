@@ -1,7 +1,7 @@
 extends ./layout.jade
 
 block content
-    script(src="./script.js")
+    script(src="../script.js")
     body(onload='init();')
         .media
             .media-left
@@ -11,7 +11,7 @@ block content
                 canvas.media-object(id="photo" width="320" height="240")
             br
             div     
-                input.btn.btn-primary.btn-lg(type="button" value="Take Photo" onclick="takePhoto();")
+                input.btn.btn-primary.btn-lg.btn-block(type="button" value="Take Photo" onclick="takePhoto();")
             br
             div
                 input.btn.btn-primary.btn-lg.btn-block(type="button" Value="Store Image" onclick="savePic();" id="download-pic")

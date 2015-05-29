@@ -41,7 +41,6 @@ exports.route = {
                     if(err) 
                         console.log(err);
                 });
-                
                 res.render('validresident', { results: results, date: date });
                 
             } else {

@@ -31,9 +31,15 @@ function savePic() {
     var canvas64 = canvas.toDataURL("image/png");
     console.log("HIT");
     
+    var url = window.location.href;
+    console.log(url);
+    var tag = url.split('/');
+    console.log(tag);
+    
+    
     $.ajax ({
         url:'http://localhost:3000/newuser',
-        data: {data:canvas64},
+        data: {data:canvas64, url: url},
         type: 'POST',
         success: function() { console.log('success'); },
         error: function() { console.log('error'); },
