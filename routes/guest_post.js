@@ -1,4 +1,4 @@
-var memberlist = require('../memberlist.json');
+var memberlist = require('../1280memberlist.json');
 var moment = require('moment');
 
 exports.route = {
@@ -10,7 +10,7 @@ exports.route = {
             
             for(var i = 0; i < memberlist.length; i++) 
             {
-                if(memberlist[i].Apartment === barcode)
+                if(memberlist[i].GuestTag == barcode)
                 {
                     results.push(memberlist[i]);
                     break;
@@ -18,9 +18,7 @@ exports.route = {
             }
 
             var hour = moment().hour();
-            var numguests = 10;
-            if(hour >= 17)
-                numguests = 6;
+            var numguests = 2;
            
             if(results.length != 0) {
                 res.render('guestnumber', { results: results, numguests: numguests });
